@@ -7,3 +7,8 @@
 .border-botm{border-bottom:1px solid #dddddd;margin-bottom:10px;}
 
 .push-down{margin-bottom:20px;}
+
+.test:nth-child(3n+1) {  
+  margin-left:0px !important;
+}
+
