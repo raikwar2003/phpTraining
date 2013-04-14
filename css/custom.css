@@ -11,4 +11,5 @@
 .test:nth-child(3n+1) {  
   margin-left:0px !important;
 }
+.break{word-break:break-word;}
 
