@@ -1,10 +1,15 @@
+<?php 
+	$color1="white";
+	$color2="grey";
+?>
+
 <section class="well span9 transparentBG">
         	<fieldset>
             	<legend class="clearfix">User Listing Table Structure View</legend>
                 
                 <table class="table">
                     <thead>
-                        <tr>
+                        <tr style="background:<?php print $color2 ?>">
                             <th>Username</th>
                             <th>First Name</th>
                             <th>Last Name</th>
@@ -20,7 +25,7 @@
                             <td>ravi.raikwar@3pillarglobal.com</td>
                             <td><a href="edit_user.html"><span class="icon-edit" title="Edit" alt="Edit"></span></a> / <a href="javascript:void(0);"><span class="icon-remove" title="Delete" alt="Delete"></span></a></td>
                         </tr>
-                        <tr>
+                        <tr class="<?php echo $color2 ?>">
                             <td>harsh.lamba</td>
                             <td>Harsh</td>
                             <td>Lamba</td>
