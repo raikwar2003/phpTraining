@@ -13,5 +13,13 @@
 }
 .break{word-break:break-word;}
 
+.dark-grey{background:#333;color:#fff;}
 .grey{background:#CCC;}
 
+.data-list .row-fluid [class*="span"]{
+  margin-left:0px;
+  padding:1% !important;
+}
+.data-list .row-fluid {
+  margin-bottom:0px !important;
+}

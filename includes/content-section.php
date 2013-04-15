@@ -1,5 +1,5 @@
 <?php 
-	$color1="white";
+	$hdrcolor="dark-grey";
 	$color2="grey";
 ?>
 
@@ -9,7 +9,7 @@
                 
                 <table class="table">
                     <thead>
-                        <tr style="background:<?php print $color2 ?>">
+                        <tr class="<?php print $hdrcolor ?>">
                             <th>Username</th>
                             <th>First Name</th>
                             <th>Last Name</th>
@@ -43,36 +43,36 @@
                 </table>
 			</fieldset>
             
-            <fieldset class="push-down">
+            <fieldset class="push-down data-list">
             	<legend class="clearfix">User Listing Div Structure View</legend>
             
-                <div class="row-fluid border-botm">
+                <div class="row-fluid border-botm  <?php echo $hdrcolor ?>">
                     <div class="span3"><strong>Username</strong></div>
                     <div class="span2"><strong>First Name</strong></div>
                     <div class="span2"><strong>Last Name</strong></div>
                     <div class="span4"><strong>Email</strong></div>
-                    <div class="span1 text-center"><strong>Action</strong></div>
+                    <div class="span2 text-center"><strong>Action</strong></div>
                 </div>
                 <div class="row-fluid border-botm">
                     <div class="span3">ravi.raikwar</div>
                     <div class="span2">Ravi</div>
                     <div class="span2">Raikwar</div>
                     <div class="span4">ravi.raikwar@3pillarglobal.com</div>
-                    <div class="span1 text-center"><a href="edit_user.html"><span class="icon-edit" title="Edit" alt="Edit"></span></a> / <a href="javascript:void(0);"><span class="icon-remove" title="Delete" alt="Delete"></span></a></div>
+                    <div class="span2 text-center"><a href="edit_user.html"><span class="icon-edit" title="Edit" alt="Edit"></span></a> / <a href="javascript:void(0);"><span class="icon-remove" title="Delete" alt="Delete"></span></a></div>
                 </div>
-                <div class="row-fluid border-botm">
+                <div class="row-fluid border-botm <?php echo $color2 ?>">
                     <div class="span3">harsh.lamba</div>
                     <div class="span2">Harsh</div>
                     <div class="span2">Lamba</div>
                     <div class="span4">harsh.lamba@3pillarglobal.com</div>
-                    <div class="span1 text-center"><a href="edit_user.html"><span class="icon-edit" title="Edit" alt="Edit"></span></a> / <a href="javascript:void(0);"><span class="icon-remove" title="Delete" alt="Delete"></span></a></div>
+                    <div class="span2 text-center"><a href="edit_user.html"><span class="icon-edit" title="Edit" alt="Edit"></span></a> / <a href="javascript:void(0);"><span class="icon-remove" title="Delete" alt="Delete"></span></a></div>
                 </div>
                 <div class="row-fluid">
                     <div class="span3">prashant.agarwal</div>
                     <div class="span2">Prashant</div>
                     <div class="span2">Agarwal</div>
                     <div class="span4">prashant.agarwal@3pillarglobal.com</div>
-                    <div class="span1 text-center"><a href="edit_user.html"><span class="icon-edit" title="Edit" alt="Edit"></span></a> / <a href="javascript:void(0);"><span class="icon-remove" title="Delete" alt="Delete"></span></a></div>
+                    <div class="span2 text-center"><a href="edit_user.html"><span class="icon-edit" title="Edit" alt="Edit"></span></a> / <a href="javascript:void(0);"><span class="icon-remove" title="Delete" alt="Delete"></span></a></div>
                 </div>
             
             </fieldset>
