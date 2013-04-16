@@ -35,5 +35,5 @@
 </li>
 <li><a href="#">Item 4</a></li>
 </ul>
-<br style="clear: left" />
+<!--<br style="clear: left" />-->
 </div>
