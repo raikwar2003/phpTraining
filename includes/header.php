@@ -28,9 +28,9 @@ html .jquerycssmenu{height: 1%;} /*Holly Hack for IE7 and below*/
     <header class="row-fluid">
     	<div class="well header clearfix pull-down">
         	<h1>Demo</h1>
-    <nav>
-    	<?php include 'top-nav.php' ?>
-    </nav>
+            <nav>
+                <?php include 'top-nav.php' ?>
+            </nav>
     	</div>
-    </header>
+	</header>
     <!--Header-->
