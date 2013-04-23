@@ -9,13 +9,43 @@
     <?php include 'includes/sidebar.php'; ?>
     <!--SideBar-->
     <section class="span9">
-        <h3>Success</h3>
-        <?php 
-			echo $_GET["user_name"]."<br>"; 
-			echo $_GET["first_name"]."<br>"; 
-			echo $_GET["last_name"]."<br>"; 
-			echo $_GET["email"]."<br>"; 
-		?>
+    	<div class="well row-fluid span12 transparentBG">
+            <!--<h3 class="text-center">Success</h3>-->
+			
+            <?php //Create Connection
+				$con=mysqli_connect("localhost","root","","phptraining");
+				
+				//Check connection
+				if(mysqli_connect_errno($con))
+				{
+					echo "Failed to connect to MySQL: ". mysqli_connect_error();
+					}
+				
+				$sql="INSERT INTO users (user_name, first_name, last_name, email)
+				VALUES
+				('$_POST[user_name]','$_POST[first_name]','$_POST[last_name]','$_POST[email]')";
+				if(!mysqli_query($con,$sql)){
+					die('Error: '.mysqli_error($con));
+				}
+				//echo "Welcome <strong>". $_POST[first_name]." ".$_POST[last_name]."</strong> in our training sessions";
+				echo "<h3 class='text-center'>Contratulations, new user successfully added</h3>";
+				
+				mysqli_close($con);
+
+				/*echo "<pre>";
+				print_r($_POST)."<br>";
+				print_r($_REQUEST)."<br>";
+				print_r($_GET);
+				echo "</pre>";	*/		
+
+
+                /*echo "Username: " . $_REQUEST["user_name"]. "<br>"; 
+                echo "First: " . $_REQUEST["first_name"]. "<br>"; 
+                echo "Last Name: " . $_REQUEST["last_name"]. "<br>"; 
+                echo "Email: " . $_REQUEST["email"] . "<br>"; */
+				
+            ?>
+        </div>
     </section>
     <!--SideBar-->
     

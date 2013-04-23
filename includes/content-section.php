@@ -7,8 +7,39 @@
 
     <fieldset>
         <legend class="clearfix">User Listing Table Structure View</legend>
-        
-        <table class="table">
+        <table  class='table'>
+			<tr class='dark-grey'>
+			<th>Username</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			</tr>
+        <?php
+			$con=mysqli_connect("localhost","root","","phptraining");
+			// Check connection
+			if (mysqli_connect_errno())
+			  {
+			  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+			  }
+			
+			$result = mysqli_query($con,"SELECT * FROM users");
+			
+			echo "";
+			
+			while($row = mysqli_fetch_array($result))
+			  {
+			  echo "<tr class='$color2'>".
+			  	"<td>" . $row['user_name'] . "</td>".
+			  	"<td>" . $row['first_name'] . "</td>".
+			  	"<td>" . $row['last_name'] . "</td>".
+			  	"<td>" . $row['email'] . "</td>".
+			 	"</tr>";
+			  }
+			
+			mysqli_close($con);
+		?>
+        </table>
+        <!--<table class="table">
             <thead>
                 <tr class="<?php print $hdrcolor; ?>">
                     <th>Username</th>
@@ -41,10 +72,10 @@
                     <td><a href="edit_user.php"><span class="icon-edit" title="Edit" alt="Edit"></span></a> / <a href="javascript:void(0);"><span class="icon-remove" title="Delete" alt="Delete"></span></a></td>
                 </tr>
             </tbody>
-        </table>
+        </table>-->
     </fieldset>
     
-    <fieldset class="push-down data-list">
+    <!--<fieldset class="push-down data-list">
         <legend class="clearfix">User Listing Div Structure View</legend>
     
         <div class="row-fluid border-botm  <?php echo $hdrcolor; ?>">
@@ -163,5 +194,5 @@
                 <div class="span7 pullLeft0"><a href="edit_user.php"><span class="icon-edit" title="Edit" alt="Edit"></span></a> / <a href="javascript:void(0);"><span class="icon-remove" title="Delete" alt="Delete"></span></a></div>
             </div>
         </div>
-    </fieldset>
+    </fieldset>-->
 </section>
