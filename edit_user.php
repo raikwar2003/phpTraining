@@ -14,7 +14,7 @@
                 <legend>Edit User</legend>
                 <div class="span6 pullLeft0">
                     <label><strong>First Name</strong></label>
-                    <input type="text" class="span12" value="Ravi" />
+                    <input type="text" class="span12" value="" />
                 </div>
                 <div class="span6">
                     <label><strong>Last Name</strong></label>

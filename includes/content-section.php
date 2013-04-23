@@ -13,6 +13,7 @@
 			<th>First Name</th>
 			<th>Last Name</th>
 			<th>Email</th>
+            <th></th>
 			</tr>
         <?php
 			$con=mysqli_connect("localhost","root","","phptraining");
@@ -24,7 +25,6 @@
 			
 			$result = mysqli_query($con,"SELECT * FROM users");
 			
-			echo "";
 			
 			while($row = mysqli_fetch_array($result))
 			  {
@@ -33,11 +33,13 @@
 			  	"<td>" . $row['first_name'] . "</td>".
 			  	"<td>" . $row['last_name'] . "</td>".
 			  	"<td>" . $row['email'] . "</td>".
+			  	"<td><a href='edit_user.php?id=$row[id];'><span class='icon-edit' title='Edit' alt='Edit'></span></a></td>".
 			 	"</tr>";
 			  }
 			
 			mysqli_close($con);
 		?>
+<!--        <td><a href="<?php //edit_user.php?id='echo $row['id'];' ?>" > </a></td>-->
         </table>
         <!--<table class="table">
             <thead>

@@ -27,8 +27,8 @@
 				if(!mysqli_query($con,$sql)){
 					die('Error: '.mysqli_error($con));
 				}
-				//echo "Welcome <strong>". $_POST[first_name]." ".$_POST[last_name]."</strong> in our training sessions";
-				echo "<h3 class='text-center'>Contratulations, new user successfully added</h3>";
+				echo "Welcome <strong>". $_POST['first_name']." ".$_POST['last_name']."</strong> in our training sessions";
+				//echo "<h3 class='text-center'>Contratulations, new user successfully added</h3>";
 				
 				mysqli_close($con);
 
