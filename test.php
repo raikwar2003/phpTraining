@@ -1,27 +1,34 @@
 <?php
-// Create connection
-$con=mysqli_connect("localhost","root","","ravi");
+$a = 10;
+echo $a;
 
-// Check connection
-if (mysqli_connect_errno($con))
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+			$con=mysqli_connect("localhost","root","","phptraining");
+			// Check connection
+			if (mysqli_connect_errno())
+			  {
+			  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+			  }
+			
+			$result = mysqli_query($con,"SELECT * FROM users where id='$_GET[id]'");
+			
+			$row = mysqli_fetch_array($result);
+			
+			if(isset($_POST['update']))
+			{	
+			if (mysqli_connect_errno())
+			  {
+			  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+			  }
+			echo "done";
+				//$update="UPDATE users SET user_name='$_POST[user_name]', first_name='$_POST[first_name]', last_name='$_POST[last_name]', email='$_POST[email]' where id='$_REQUEST[id]'";
+//				mysqli_query($con,"UPDATE users SET user_name='$_POST[user_name]', first_name='$_POST['first_name']', last_name='$_POST[last_name]', email='$_POST[email]' where id='$_REQUEST['id']'");
+			}
+		
 ?>
 
-<?php
-function key_comp_func($a,$b)
-{
-if ($a===$b)
-  {
-  return o;
-  }
-  return ($a>$b)?1:-1;
-}
-
-$a1=array("red","green","blue","yellow");
-$a2=array("red","green","white");
-
-$result=array_diff_uassoc($a1,$a2,"key_comp_func");
-print_r($result);
+echo "After Warning";
+<?php 
+	include iincludes/header.php'; 
 ?>
+
+

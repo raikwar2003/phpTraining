@@ -1,3 +1,25 @@
+<?php //Create Connection
+	if($_POST){
+	$con=mysqli_connect("localhost","root","","phptraining");
+	
+	//Check connection
+	if(mysqli_connect_errno($con))
+	{
+		echo "Failed to connect to MySQL: ". mysqli_connect_error();
+	}
+	
+	$sql="INSERT INTO users (user_name, first_name, last_name, email)
+	VALUES	('$_POST[user_name]','$_POST[first_name]','$_POST[last_name]','$_POST[email]')";
+	
+	if(!mysqli_query($con,$sql)){
+		die('Error: '.mysqli_error($con));
+	}
+	
+	mysqli_close($con);
+	header("Location: success.php");
+	}
+?>
+
 <!--include Header-->
 <?php include 'includes/header.php'; ?>
 <!--header-->
@@ -9,7 +31,7 @@
     <?php include 'includes/sidebar.php'; ?>
     <!--SideBar-->
     <section class="span9">
-        <form class="well row-fluid span12 transparentBG" action="success.php" method="post" >
+        <form class="well row-fluid span12 transparentBG" action="" method="post" >
             <fieldset>
                 <legend>Create New User</legend>
                 <div class="span6 pullLeft0">
@@ -43,3 +65,4 @@
 <!--include Footer-->
 <?php include 'includes/footer.php'; ?>
 <!--Footer-->
+
