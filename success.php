@@ -10,7 +10,7 @@
     <!--SideBar-->
     <section class="span9">
     	<div class="well row-fluid span12 transparentBG">
-            <!--<h3 class="text-center">Success</h3>-->
+            <h3 class="text-center">Success</h3>
 			
             <?php //Create Connection
 				//$con=mysqli_connect("localhost","root","","phptraining");

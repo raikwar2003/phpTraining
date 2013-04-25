@@ -9,11 +9,11 @@
         <legend class="clearfix">User Listing Table Structure View</legend>
         <table  class='table'>
 			<tr class='dark-grey'>
-			<th>Username</th>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Email</th>
-            <th></th>
+                <th width="24%">Username</th>
+                <th width="17%">First Name</th>
+                <th width="17%">Last Name</th>
+                <th width="35%">Email</th>
+                <th></th>
 			</tr>
         <?php
 			$con=mysqli_connect("localhost","root","","phptraining");
@@ -27,13 +27,13 @@
 			
 			
 			while($row = mysqli_fetch_array($result))
-			  {
+			  { 
 			  echo "<tr class='$color2'>".
 			  	"<td>" . $row['user_name'] . "</td>".
 			  	"<td>" . $row['first_name'] . "</td>".
 			  	"<td>" . $row['last_name'] . "</td>".
 			  	"<td>" . $row['email'] . "</td>".
-			  	"<td><a href='edit_user.php?id=$row[id];'><span class='icon-edit' title='Edit' alt='Edit'></span></a></td>".
+			  	"<td><a href='edit_user.php?id=$row[id];'><span class='icon-edit' title='Edit' alt='Edit'></span></a> / <a href='delete.php?id=$row[id]'><span class='icon-remove' title='Delete' alt='Delete'></span></a></td>".
 			 	"</tr>";
 			  }
 			
