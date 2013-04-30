@@ -1,9 +1,15 @@
 
 <?php //Create Connection
-	include './classes/employee.php'; 
+	/*include './classes/employee.php'; 
 	if($_POST){
 		$emp=new Employee();
-		$emp->addEmployee($_POST["user_name"], $_POST["first_name"], $_POST["last_name"], $_POST["email"]);
+		$emp->addEmployee();
+	}*/
+	include 'classes/users.php'; 
+	if ($_POST)
+	{
+		$add_emp=new users();
+		$add_emp->create();
 	}
 ?>
 

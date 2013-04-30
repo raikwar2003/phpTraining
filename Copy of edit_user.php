@@ -1,6 +1,6 @@
  <?php
  
-			/*$con=mysqli_connect("localhost","root","","phptraining");
+			$con=mysqli_connect("localhost","root","","phptraining");
 			// Check connection
 			if (mysqli_connect_errno())
 			  {
@@ -16,19 +16,6 @@
 				//$update="UPDATE users SET user_name='$_POST[user_name]', first_name='$_POST[first_name]', last_name='$_POST[last_name]', email='$_POST[email]' where id='$_REQUEST[id]'";
 				mysqli_query($con,"UPDATE users SET user_name='$_POST[user_name]', first_name='$_POST[first_name]', last_name='$_POST[last_name]', email='$_POST[email]' where id='$_REQUEST[id]'");
 				header("Location: success.php");
-			}*/
-			/*if($_GET){
-				$emp=new Employee;
-				$emp->editEmployee($_GET["user_name"], $_GET["first_name"], $_GET["last_name"], $_GET["email"]);
-			}*/			
-			
-			include 'classes/employee.php';
-			$result = Employee::editEmployee();
-
-			if(isset($_POST['update']))
-			{	
-				$updateUser = new Employee();
-				$updateUser->update();
 			}
 		
 ?>
@@ -48,19 +35,19 @@
                 <legend>Edit User</legend>
                 <div class="span6 pullLeft0">
                     <label><strong>Username</strong></label>
-                    <input type="text" class="span12" name="user_name" value="<?php print_r ("$result[user_name]") ?>" />
+                    <input type="text" class="span12" name="user_name" value="<?php echo "$row[user_name]" ?>" />
                 </div>
                 <div class="span6">
                     <label><strong>First Name</strong></label>
-                    <input type="text" class="span12" name="first_name" value="<?php print_r ("$result[first_name]") ?>" />
+                    <input type="text" class="span12" name="first_name" value="<?php echo "$row[first_name]" ?>" />
                 </div>
                 <div class="span6 pullLeft0">
                     <label><strong>Last Name</strong></label>
-                    <input type="text" class="span12" name="last_name" value="<?php print_r ("$result[last_name]") ?>" />
+                    <input type="text" class="span12" name="last_name" value="<?php echo "$row[last_name]" ?>" />
                 </div>
                 <div class="span6">
                     <label><strong>Email</strong></label>
-                    <input type="text" class="span12" name="email" value="<?php print_r ("$result[email]") ?>" />
+                    <input type="text" class="span12" name="email" value="<?php echo "$row[email]" ?>" />
                 </div>
                 <div class="span12 pullLeft0 text-right">
                     <input type="submit" name="update" value="Update" class="btn" />
