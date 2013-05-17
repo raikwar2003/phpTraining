@@ -49,7 +49,7 @@
 				<td><?php echo $row['first_name'];?></td>
 				<td><?php echo "$row[last_name]";?></td>
 				<td><?php echo "$row[email]";?></td>
-				<td><a href="<?php echo 'edit_user.php?id=$row[id];' ?>"><span class="icon-edit" title="Edit"></span></a> / <a href="<?php echo 'delete.php?id=$row[id]'; ?>"><span class="icon-remove" title="Delete" ></span></a></td>
+				<td><?php echo "<a href='edit_user.php?id=$row[id]'>"; ?><span class="icon-edit" title="Edit"></span></a> / <a href="<?php echo 'delete.php?id=$row[id]'; ?>"><span class="icon-remove" title="Delete" ></span></a></td>
 			</tr>
 			<?php } ?>
 <!--        <td><a href="<?php //edit_user.php?id='echo $row['id'];' ?>" > </a></td>-->

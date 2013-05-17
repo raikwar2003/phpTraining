@@ -116,7 +116,7 @@
 ?>
 
 <?php  
-	echo "<br />-----------------------------------<br />"; 
+	echo "<br />--------------Array Count values---------------------<br />"; 
 	$name=array("Rahul", "23", "Ronit","Rahul", "23", "23");
 	//$c=array_combine($name, $age);
 	print_r(array_count_values($name));
@@ -130,4 +130,10 @@
 	$result=array_diff($name1,$name2);
 	print_r($result);
 ?>
+
+<?php  
+	$str = "Hello world!";
+echo chunk_split($str,1,"+");
+?>
+
 
